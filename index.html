@@ -92,6 +92,43 @@ footer {
   opacity: 0.9;
 }
 
+  /* fullscreen image (lightbox) */
+.lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.95);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  padding: 20px;
+}
+
+.lightbox img {
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 8px;
+}
+
+.lightbox:target {
+  display: flex;
+}
+
+.lightbox .close {
+  position: absolute;
+  top: 20px;
+  right: 25px;
+  font-size: 28px;
+  color: #fff;
+  text-decoration: none;
+  opacity: 0.8;
+}
+
+.lightbox .close:hover {
+  opacity: 1;
+  cursor: pointer;
+}
+
 </style>
 </head>
 
@@ -595,12 +632,20 @@ On average, ~10,000 FC are required to obtain 650 RFC (luck dependent).
   <h2>📊 FC8 Troops Progression Overview</h2>
 
   <figure class="img-block">
+  <a href="#fc8-full">
     <img src="images/fc8-roadmap.png"
          alt="FC8 Troops Progression Overview – Super Refinement Plans by Spending Level">
-    <figcaption>
-      Super Refinement Plans &amp; Timeline by Spending Level
-    </figcaption>
-  </figure>
+  </a>
+  <figcaption>
+    Super Refinement Plans &amp; Timeline by Spending Level
+  </figcaption>
+</figure>
+
+<!-- fullscreen overlay -->
+<div id="fc8-full" class="lightbox">
+  <a href="#" class="close">✕</a>
+  <img src="images/fc8-roadmap.png"
+       alt="FC8 Troops Progression Overview – Fullscreen">
 </div>
 
   
