@@ -1,0 +1,9 @@
+title: FC8 State 2528
+description: Road to FC8 guide
+
+remote_theme: just-the-docs/just-the-docs
+plugins:
+  - jekyll-remote-theme
+
+color_scheme: dark
+search_enabled: true
